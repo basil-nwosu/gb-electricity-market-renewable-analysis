@@ -46,7 +46,29 @@ The analytical workflow included:
 - Identifying negative-price settlement periods
 - Creating DAX measures for market KPIs
 - Building an interactive Power BI dashboard with date filtering
+## Key Calculations
 
+The following calculations were used to create the analytical variables used throughout the project.
+
+**Embedded Renewable Generation**
+
+Embedded Renewable Generation = Embedded Wind Generation + Embedded Solar Generation
+
+**Embedded Renewable Penetration**
+
+Embedded Renewable Penetration = Embedded Renewable Generation / National Demand (ND)
+
+This represents estimated embedded wind and solar generation as a proportion of National Demand (ND).
+
+**Negative Price Flag**
+
+Negative Price Flag = 1 when Market Index Price < 0, otherwise 0
+
+**Negative Price Frequency**
+
+Negative Price Frequency = Average of Negative Price Flag
+
+This measures the proportion of settlement periods in which the Market Index Price was negative.
 ## Dashboard
 
 ![GB Electricity Market & Renewable Analysis Dashboard](dashboard/gb-electricity-market-dashboard.png)
